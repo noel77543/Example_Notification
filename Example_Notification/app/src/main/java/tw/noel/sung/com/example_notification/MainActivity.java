@@ -9,8 +9,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CustomNotification notification = new CustomNotification(this,MainActivity.class,null);
-        notification.showMainNotification(R.mipmap.ic_launcher,R.mipmap.ic_launcher_round,"Hello Notification","安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安安");
+        //開啟Launch Activity所用
+//        CustomNotification notification = new CustomNotification(this, MainActivity.class, null);
+//        notification.displayNotificationToLaunchActivity(R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, getString(R.string.notification_title), getString(R.string.notification_content), CustomNotification.NOTIFICATION_TYPE_BIG_TEXT);
 
+        //開啟指定 Activity所用
+        CustomNotification notification = new CustomNotification(this, NextActivity.class, null);
+        notification.displayNotificationToLaunchActivity(R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, getString(R.string.notification_title), getString(R.string.notification_content), CustomNotification.NOTIFICATION_TYPE_CUSTOM);
     }
 }
